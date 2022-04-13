@@ -1,5 +1,6 @@
 .body{
     width:100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   
     .head{
         height:200px;
@@ -33,18 +34,65 @@
     }
     .content{
         height:100px;
-        width:70%;
+        width:75%;
         background-color: white;
       margin:0 auto;
         z-index:2222;
         position:absolute;
         bottom:-30px;
-       
+       display:flex;
+   
+     
+      
         border-radius: 15px;
+        .info{
+           
+            margin:25px;
+           display:flex;
+           flex-direction: column;
+           width:250px;
+
+            span{
+                font-size:12px;
+            }
+            b{
+                font-size:20px;
+            }
+        }
        
     }
     .map{
-        height:200px;
+        height:400px;
         background-color: black;
+    }
+}
+
+
+@media(max-width:700px){
+    .body{
+        .head{
+            .content{
+                height:300px;
+                width:70%;
+                background-color: white;
+              margin:0 auto;
+                z-index:2222;
+                position:absolute;
+                bottom:-250px;
+               display:flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+              
+                border-radius: 15px;
+                .info{
+                    margin-top:8px;
+                    align-items: center;
+                    justify-content: center;
+                 
+                }
+               
+            }
+        }
     }
 }

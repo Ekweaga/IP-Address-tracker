@@ -8,9 +8,10 @@ export class IpService {
 
   constructor(private http:HttpClient) { }
 
-  getip(){
-    return this.http.get("http://ip-api.com/json").subscribe((data:any)=>{
-      console.log(data);
-    })
+   getip(){
+  return this.http.get("http://ip-api.com/json")
+  }
+  getaip(data:any){
+    return this.http.get(`http://ip-api.com/json/${data}`)
   }
 }

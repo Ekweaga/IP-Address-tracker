@@ -5,13 +5,34 @@
   <div class="head">
    
     
-  <div> <input typ="text" placeholder="search Ip address or domain"/><button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button></div> 
+  <div> <input typ="text" placeholder="search Ip address or a domain name" [(ngModel)]="value"/><button (click)="getip()"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button></div> 
  
   <div class="content">
+    <div class="info">
+      <span>IP ADDRESS</span>
+      <b>{{data.query}}</b>
+  
+    </div>
+    <div class="info">
+      <span>LOCATION</span>
+      <b>{{data.city}}, {{data.countryCode}}</b>
+      
+    </div>
+    <div class="info">
+      <span>TIME ZONE</span>
+      <b>UTC 0:500</b>
+      
+    </div>
+    <div class="info">
+      <span>ISP</span>
+      <b>{{data.isp}}</b>
+      
+    </div>
    
   </div>
 </div>
 <div class="map">
+  
 
 </div>
  
