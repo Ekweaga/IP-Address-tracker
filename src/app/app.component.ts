@@ -9,11 +9,13 @@ import { IpService } from './ip.service';
 export class AppComponent implements OnInit  {
   data:any;
   value:any;
+  error:boolean = true;
   constructor(private ip: IpService){
    
   }
   ngOnInit(){
 this.ip.getip().subscribe((data)=>{
+  this.error = false;
   this.data = data
   console.log(this.data)
 })
@@ -22,7 +24,9 @@ this.ip.getip().subscribe((data)=>{
   getip(){
 this.ip.getaip(this.value).subscribe((data:any)=>{
   console.log(data);
+  this.error = false;
   this.data = data
+  this.value = ""
 })
   }
   title = 'GetIP';
